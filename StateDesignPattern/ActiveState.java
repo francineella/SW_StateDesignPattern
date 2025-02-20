@@ -1,26 +1,37 @@
 package StateDesignPattern;
 
 public class ActiveState implements AccountState {
-    private AccountState accountState;
 
-    public ActiveState(Account account) {
-        this.account = account;
+    @Override
+    public void deposit(Account account, double amount) {
+        account.setBalance(account.getBalance() + amount);
+        System.out.println("Deposit successful \n" + account);
     }
 
     @Override
-    public void deposit(String accountNumber, double balance) {
-        account.setAccountNumber();
-        System.out.println(account.toString);
+    public void withdraw(Account account, double amount) {
+        if (account.getBalance() >= amount) {
+            account.setBalance(account.getBalance() - amount);
+            System.out.println("Withdrawal successful \n" + account);
+        } else {
+            System.out.println("Insufficient balance");
+        }
     }
 
     @Override
-    public void activate() {
-        System.out.println("Account is activated!");
+    public void activate(Account account) {
+        System.out.println("Account is already activated!");
     }
 
     @Override
-    public void suspend() {
+    public void suspend(Account account) {
         System.out.println("Account is suspended!");
     }
+
+    @Override
+    public void close(Account account) {
+        account.setState(new ClosedState());
+        System.out.println("Account is closed!");
+    };
 
 }

@@ -27,7 +27,7 @@ public class AccountTest{
 		myAccount.activate(); // Displays "You cannot activate a closed account!"	
 
 		//Suspend the account
-		my.Account.activate(); // Displays " You cannot suspend a closed account!"
+		myAccount.activate(); // Displays " You cannot suspend a closed account!"
 
 
 		//Withdraw to the account
