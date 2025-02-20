@@ -25,6 +25,7 @@ public class ActiveState implements AccountState {
 
     @Override
     public void suspend(Account account) {
+        account.setState(new SuspendedState());
         System.out.println("Account is suspended!");
     }
 
