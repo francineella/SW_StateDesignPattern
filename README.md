@@ -22,24 +22,24 @@ Delegate actions like deposit, withdraw, activate, suspend, and close to the cur
  
 ## Logic:
 
-If the account is active\
+**If the account is active**\
     You can either suspend it or close it.\
-If the account is suspended\
+**If the account is suspended**\
     You can either activate or close it.\
     No deposits and withdrawals allowed.\
-If the account is closed\
+**If the account is closed**\
     You can neither suspend nor activate it.\
     No deposits and withdrawals allowed.
 
 
 ## Composition of Account:
-attributes:\
+**attributes:**\
 accountNumber : String\
 balance:  Double\
 accountState:  AccountState
 
 ## Methods:
-Setter and getter methods\
+**Setter and getter methods**\
 deposit(Double depositAmount): void\
 withdraw(Double withdrawAmount): void\
 suspend(): void\
