@@ -26,17 +26,17 @@ If the account is active\
     You can either suspend it or close it.\
 If the account is suspended\
     You can either activate or close it.\
-     No deposits and withdrawals allowed.\
+    No deposits and withdrawals allowed.\
 If the account is closed\
-     You can neither suspend nor activate it.\
-      No deposits and withdrawals allowed.\
+    You can neither suspend nor activate it.\
+    No deposits and withdrawals allowed.
 
 
 ## Composition of Account:
 attributes:\
 accountNumber : String\
 balance:  Double\
-accountState:  AccountState\
+accountState:  AccountState
 
 ## Methods:
 Setter and getter methods\
